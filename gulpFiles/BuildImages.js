@@ -14,9 +14,9 @@ export default () => {
         gifsicle({ interlaced: true }),
         mozjpeg({ quality: 10, progressive: true }),
         optipng({ optimizationLevel: 1 }),
-        svgo({
-          plugins: [{ removeViewBox: true }, { cleanupIDs: false }],
-        }),
+        // svgo({
+        //   plugins: [{ removeViewBox: true }, { cleanupIDs: false }],
+        // }),
       ])
     )
     .pipe(gulp.dest(path.dest));

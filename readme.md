@@ -1,10 +1,6 @@
-# Gulp 4+ Modular Preset By Octapia
+# Fresh meal using html css javascript 
 
 It's an open source project by Octapia under MIT licence
-
-## What is gulp?
-
-Gulp is a automation toolkit that helps you automate time-consuming tasks in your application development
 
 ## What we did?
 

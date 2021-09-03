@@ -1,0 +1,16 @@
+.navbar {
+  padding: 2rem 0;
+  .nav {
+    position: relative;
+    .link {
+      padding: 1rem 2rem;
+      font-size: var(--fontSize2);
+      color: var(--colorGrey);
+      transition: all 0.3s linear;
+      &.active,
+      &:hover {
+        background-color: var(--bgBrand);
+      }
+    }
+  }
+}

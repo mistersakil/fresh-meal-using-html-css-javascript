@@ -1,0 +1,24 @@
+.logoSection {
+  padding: 2rem 0;
+  .logo {
+    font-family: "GreatVibes", cursive;
+    font-size: 3.5rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    position: relative;
+    color: var(--colorBrand);
+    text-decoration: none;
+    &::after {
+      content: "shop";
+      position: absolute;
+      font-size: 1.2rem;
+      font-family: "Oswald", sans-serif;
+      font-weight: 500;
+      left: 50%;
+      top: 70%;
+      transform: translateX(-50%);
+      color: var(--colorGrey);
+      font-style: italic;
+    }
+  }
+}

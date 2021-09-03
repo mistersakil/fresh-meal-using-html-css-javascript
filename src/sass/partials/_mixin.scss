@@ -1,0 +1,37 @@
+$xLarge: 1200px;
+$large: 992px;
+$medium: 768px;
+$small: 576px;
+$xSmall: 350px;
+/* Large 1200px to ... */
+@mixin _xLargeScreen {
+  @media screen and (min-width: $xLarge) {
+    @content;
+  }
+}
+/* Large 992px to 1199px */
+@mixin _largeScreen {
+  @media screen and (min-width: $large) {
+    @content;
+  }
+}
+/* Medium 768px to 991px */
+@mixin _mediumScreen {
+  @media screen and (min-width: $medium) {
+    @content;
+  }
+}
+
+/* Small 576px to 767px */
+@mixin _smallScreen {
+  @media screen and (min-width: $small) {
+    @content;
+  }
+}
+
+/* Small 350px to 575px */
+@mixin _xSmallScreen {
+  @media screen and (min-width: $xSmall) {
+    @content;
+  }
+}

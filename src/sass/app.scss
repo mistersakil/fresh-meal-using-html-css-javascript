@@ -1,14 +1,8 @@
-@import "./partials/internal";
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-body {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
+@import "fontAwesome/fontawesome";
+@import "fontAwesome/solid";
+@import "fontAwesome/brands";
+@import "partials/mixin";
+@import "partials/utility";
+@import "partials/topBar";
+@import "partials/logoSection";
+@import "partials/navbar";

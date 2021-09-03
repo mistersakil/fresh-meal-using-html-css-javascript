@@ -11,7 +11,7 @@ const browserSync = browser.create();
 export default (isMinified = false) => {
   const sass = gulpSass(dartSass);
   const path = {
-    src: ["src/sass/external.scss", "src/sass/app.scss"],
+    src: ["src/sass/app.scss"],
     dest: "public/css",
   };
   if (isMinified) {
@@ -31,7 +31,6 @@ export default (isMinified = false) => {
     .pipe(sourcemaps.init())
     .pipe(concat("style.css"))
     .pipe(sass().on("error", sass.logError))
-    .pipe(autoprefixer("last 2 versions"))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest(path.dest))
     .pipe(browserSync.stream());
