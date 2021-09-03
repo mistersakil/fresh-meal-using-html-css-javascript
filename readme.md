@@ -2,13 +2,9 @@
 
 It's an open source project by Octapia under MIT licence
 
-## What we did?
-
-- Build css from sass/scss. Autoprefix and minification applied
-- Javascript minification
-- Build optimized images
-- Live reload
-- Clean directory
+## Demo
+   
+   **[Website Owner](https://mistersakil.github.io/fresh-meal-using-html-css-javascript-/)**
 
 ## Cli Commands
 
