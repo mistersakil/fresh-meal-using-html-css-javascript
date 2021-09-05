@@ -17,12 +17,16 @@
 :root {
   --bgPrimary: rgb(30, 30, 30);
   --bgSecondary: rgb(255, 255, 255);
-  --bgBrand: rgb(240, 180, 70);
+  --bgBrand: rgb(200, 50, 50);
   --bgGrey: rgb(100, 100, 100);
   --bgGreyLight: rgb(220, 220, 220);
+  --bgInfo: rgb(51, 153, 255);
+  --bgSuccess: rgb(0, 204, 102);
+  --bgDanger: rgb(255, 51, 51);
+  --bgWarning: rgb(204, 122, 0);
   --colorPrimary: rgb(30, 30, 30);
   --colorSecondary: rgb(255, 255, 255);
-  --colorBrand: rgb(240, 180, 70);
+  --colorBrand: rgb(200, 50, 50);
   --colorGrey: rgb(100, 100, 100);
   --colorGreyLight: rgb(220, 220, 220);
 }
@@ -40,7 +44,7 @@ body {
   color: var(--colorPrimary);
   font-size: 1.6rem;
   min-height: 150vh;
-  font-family: "Poppins", "Roboto", " Oswald", "Great Vibes", cursive, Arial,
+  font-family: "Poppins", "Roboto", " Oswald", "GreatVibes", cursive, Arial,
     Helvetica, sans-serif;
   background: var(--bgLight);
 }
@@ -126,7 +130,11 @@ a:active {
   font-size: 3rem;
 }
 .fontSize4 {
-  font-size: 4rem;
+  font-size: 3rem;
+
+  @include _mediumScreen {
+    font-size: 4rem;
+  }
 }
 .flex {
   display: flex;
@@ -165,6 +173,9 @@ a:active {
 .ucFirst::first-letter {
   text-transform: uppercase;
 }
+.capitalize {
+  text-transform: capitalize;
+}
 .hiddenSmall {
   display: none;
   @include _smallScreen {
@@ -186,4 +197,58 @@ a:active {
     bottom: -2.8rem;
     z-index: -1;
   }
+}
+.btn {
+  padding: 0.5rem 1rem;
+  background-color: var(--bgPrimary);
+  color: var(--colorSecondary);
+  border: none;
+  outline: none;
+  position: relative;
+  z-index: 10;
+  overflow: hidden;
+  * {
+    position: relative;
+    z-index: 9;
+  }
+  border-radius: 0.5rem;
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--bgBrand);
+    z-index: 8;
+    clip-path: inset(0 0 100% 0);
+    transition: all 0.3s linear;
+    border-radius: 0.5rem;
+  }
+  &:hover::after {
+    clip-path: inset(0);
+  }
+  @include _xSmallScreen {
+    padding: 0.5rem 2rem;
+  }
+}
+
+.btnInfo {
+  @extend .btn;
+  background-color: var(--bgInfo);
+}
+.btnWarning {
+  @extend .btn;
+  background-color: var(--bgWarning);
+}
+.btnDanger {
+  @extend .btn;
+  background-color: var(--bgDanger);
+}
+.btnSuccess {
+  @extend .btn;
+  background-color: var(--bgSuccess);
+}
+.padding {
+  padding: 1rem;
 }

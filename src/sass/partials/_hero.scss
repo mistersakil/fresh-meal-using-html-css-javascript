@@ -1,0 +1,36 @@
+.hero {
+  position: relative;
+  min-height: calc(100vh - (30px + 85px + 85px));
+  width: 100%;
+  background-image: url(../images/hero.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  padding-top: 8%;
+  .content {
+    flex: 1 1 90%;
+    .logo {
+      font-family: "GreatVibes", sans-serif;
+    }
+    .padding {
+      padding: 1rem 0 2rem 0;
+    }
+    @include _mediumScreen {
+      flex: 1 1 60%;
+    }
+  }
+  .figure {
+    flex: 1 1 30%;
+    .img {
+      width: 80%;
+      float: none;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      @include _mediumScreen {
+        float: right;
+      }
+    }
+  }
+}

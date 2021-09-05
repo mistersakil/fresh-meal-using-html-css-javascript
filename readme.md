@@ -4,7 +4,7 @@ It's an open source project by Octapia under MIT licence
 
 ## Demo
    
-   **[Website Owner](https://mistersakil.github.io/fresh-meal-using-html-css-javascript-/)**
+   **[Demo](https://mistersakil.github.io/fresh-meal-using-html-css-javascript-/)**
 
 ## Cli Commands
 
