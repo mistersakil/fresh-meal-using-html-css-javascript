@@ -21,18 +21,21 @@
     }
   }
   .figure {
-    flex: 1 1 30%;
+    flex: 1 1 90%;
+    padding: 2rem 0;
+    @extend .flex;
+    @extend .justifyCenter;
+
     .img {
       width: 80%;
       float: none;
-      position: relative;
-      left: 50%;
-      transform: translateX(-50%);
       animation: upDown 2s ease infinite;
       @include _mediumScreen {
         float: right;
-        position: static;
       }
+    }
+    @include _mediumScreen {
+      flex: 1 1 30%;
     }
   }
 }
