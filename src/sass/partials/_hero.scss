@@ -28,8 +28,10 @@
       position: relative;
       left: 50%;
       transform: translateX(-50%);
+      animation: upDown 2s ease infinite;
       @include _mediumScreen {
         float: right;
+        position: static;
       }
     }
   }
