@@ -7,14 +7,15 @@ const browserSync = browser.create();
 
 export default (isMinified = false) => {
   const path = {
-    src: ["src/js/app.js"],
+    src: ["./src/js/swiper.js", "./src/js/app.js"],
     dest: "public/js",
   };
-  if (!isMinified) {
+  if (isMinified) {
     return gulp
       .src(path.src)
       .pipe(sourcemaps.init())
-      .pipe(concat("main.js"))
+      .pipe(concat("main.js", { newLine: ";" }))
+      .pipe(uglify())
       .pipe(sourcemaps.write())
       .pipe(gulp.dest(path.dest))
       .pipe(browserSync.stream());
@@ -23,7 +24,6 @@ export default (isMinified = false) => {
     .src(path.src)
     .pipe(sourcemaps.init())
     .pipe(concat("main.js"))
-    .pipe(uglify())
     .pipe(sourcemaps.write())
     .pipe(gulp.dest(path.dest))
     .pipe(browserSync.stream());

@@ -11,7 +11,7 @@ const browserSync = browser.create();
 export default (isMinified = false) => {
   const sass = gulpSass(dartSass);
   const path = {
-    src: ["src/sass/app.scss"],
+    src: ["./src/sass/swiper.css", "./src/sass/app.scss"],
     dest: "public/css",
   };
   if (isMinified) {

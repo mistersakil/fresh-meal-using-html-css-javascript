@@ -19,7 +19,7 @@
   --bgSecondary: rgb(255, 255, 255);
   --bgBrand: rgb(200, 50, 50);
   --bgGrey: rgb(100, 100, 100);
-  --bgGreyLight: rgb(220, 220, 220);
+  --bgGreyLight: rgb(230, 230, 230);
   --bgInfo: rgb(51, 153, 255);
   --bgSuccess: rgb(0, 204, 102);
   --bgDanger: rgb(255, 51, 51);
@@ -28,7 +28,7 @@
   --colorSecondary: rgb(255, 255, 255);
   --colorBrand: rgb(200, 50, 50);
   --colorGrey: rgb(100, 100, 100);
-  --colorGreyLight: rgb(220, 220, 220);
+  --colorGreyLight: rgb(230, 230, 230);
 }
 * {
   margin: 0;
@@ -43,7 +43,7 @@ html {
 body {
   color: var(--colorPrimary);
   font-size: 1.6rem;
-  min-height: 150vh;
+  min-height: 4000px;
   font-family: "Poppins", "Roboto", " Oswald", "GreatVibes", cursive, Arial,
     Helvetica, sans-serif;
   background: var(--bgLight);
@@ -102,6 +102,9 @@ a:active {
 
 .bgSecondary {
   background-color: var(--bgSecondary);
+}
+.bgGreyLight {
+  background-color: var(--bgGreyLight);
 }
 
 .colorPrimary {
@@ -179,6 +182,9 @@ a:active {
 .capitalize {
   text-transform: capitalize;
 }
+.uppercase {
+  text-transform: uppercase;
+}
 .hiddenSmall {
   display: none;
   @include _smallScreen {
@@ -231,6 +237,7 @@ a:active {
   &:hover::after {
     clip-path: inset(0);
   }
+
   @include _xSmallScreen {
     padding: 0.5rem 2rem;
   }
@@ -252,6 +259,30 @@ a:active {
   @extend .btn;
   background-color: var(--bgSuccess);
 }
+
 .padding {
   padding: 1rem;
+}
+.sectionTitle {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  text-transform: capitalize;
+  font-size: 3rem;
+  font-weight: 600;
+  position: relative;
+  padding-top: 4rem;
+  margin-bottom: 8rem;
+  font-family: "Oswald";
+  &::after {
+    content: "";
+    position: absolute;
+    background-image: url(../images/hr.svg);
+    width: 100%;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 2.5rem;
+    bottom: -2.5rem;
+  }
 }
