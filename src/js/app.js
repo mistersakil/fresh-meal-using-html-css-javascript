@@ -1,6 +1,7 @@
 /* Top products swiper slider */
 var swiper = new Swiper(".mySwiper", {
   slidesPerView: 1,
+  autoplay: true,
   spaceBetween: 30,
   loop: true,
   pagination: {

@@ -259,6 +259,13 @@ a:active {
   @extend .btn;
   background-color: var(--bgSuccess);
 }
+.btnReadMore {
+  @extend .btn;
+  display: inline-block;
+  margin-top: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
 
 .padding {
   padding: 1rem;
