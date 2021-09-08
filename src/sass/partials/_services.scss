@@ -1,0 +1,48 @@
+.services {
+  .col {
+    flex: 1 1 100%;
+    padding: 5rem 2rem 2rem 2rem;
+    text-align: center;
+    position: relative;
+    border-radius: 0.5rem;
+    margin-bottom: 5rem;
+    .iconContainer {
+      display: inline-block;
+      width: 5rem;
+      height: 5rem;
+      position: absolute;
+      top: -0.8rem;
+      left: 50%;
+      border: 0.2rem solid var(--bgPrimary);
+      transform: rotate(45deg) translateX(-50%);
+      border-radius: 1rem;
+      .icon {
+        @extend .colorPrimary;
+        transform: rotate(-45deg);
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        line-height: 5rem;
+        font-size: 2rem;
+      }
+    }
+
+    &:hover {
+      .iconContainer {
+        border: 0.2rem solid var(--bgSecondary);
+        background-color: var(--bgGrey);
+        transform: rotate(45deg) translateX(-50%) scale(1.2);
+        .icon {
+          color: var(--colorSecondary);
+        }
+      }
+    }
+
+    @include _smallScreen {
+      margin-bottom: 0rem;
+    }
+    @include _mediumScreen {
+      flex: 1 1 28%;
+    }
+  }
+}

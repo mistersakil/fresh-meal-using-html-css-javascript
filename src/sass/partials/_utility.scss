@@ -43,7 +43,7 @@ html {
 body {
   color: var(--colorPrimary);
   font-size: 1.6rem;
-  min-height: 4000px;
+  // min-height: 4000px;
   font-family: "Poppins", "Roboto", " Oswald", "GreatVibes", cursive, Arial,
     Helvetica, sans-serif;
   background: var(--bgLight);
@@ -55,6 +55,9 @@ body {
   --colorGrey: rgb(255, 255, 255);
   --colorSecondary: rgb(20, 20, 20);
   --colorBrand: rgb(20, 20, 20);
+}
+section {
+  padding: 5rem 0 10rem 0;
 }
 p {
   font-family: "Roboto", "Poppins", sans-serif;
@@ -225,6 +228,7 @@ a:active {
 .boxShadowCard {
   position: relative;
   background: white;
+  z-index: 10;
   &::after {
     content: "";
     height: 5px;
@@ -292,7 +296,7 @@ a:active {
   background-color: var(--bgSuccess);
 }
 .btnReadMore {
-  @extend .btn;
+  @extend .btnWarning;
   display: inline-block;
   margin-top: 2rem;
   left: 50%;
@@ -333,6 +337,14 @@ a:active {
   margin-bottom: 2rem;
   font-weight: 600;
   line-height: 3rem;
+}
+.subHeading {
+  @extend .colorPrimary;
+  @extend .capitalize;
+  @extend .fontSize1;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  line-height: 2.4rem;
 }
 .info {
   @extend .fontSize1;
