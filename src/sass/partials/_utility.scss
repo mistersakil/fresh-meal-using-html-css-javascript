@@ -24,7 +24,7 @@
   --bgSuccess: rgb(0, 204, 102);
   --bgDanger: rgb(255, 51, 51);
   --bgWarning: rgb(204, 122, 0);
-  --colorPrimary: rgb(30, 30, 30);
+  --colorPrimary: rgb(50, 50, 50);
   --colorSecondary: rgb(255, 255, 255);
   --colorBrand: rgb(200, 50, 50);
   --colorGrey: rgb(100, 100, 100);
@@ -160,6 +160,18 @@ a:active {
     gap: 2rem;
   }
 }
+.gap5 {
+  gap: 1rem;
+  @include _smallScreen {
+    gap: 5rem;
+  }
+}
+.gap10 {
+  gap: 1rem;
+  @include _smallScreen {
+    gap: 10rem;
+  }
+}
 .flexColumn {
   display: flex;
   flex-direction: column;
@@ -172,6 +184,9 @@ a:active {
 }
 .alignCenter {
   align-items: center;
+}
+.alignTop {
+  align-items: flex-start;
 }
 .icon {
   font-size: 1.4rem;
@@ -309,4 +324,19 @@ a:active {
     height: 2.5rem;
     bottom: -2.5rem;
   }
+}
+
+.heading {
+  @extend .colorPrimary;
+  @extend .capitalize;
+  @extend .fontSize2;
+  margin-bottom: 2rem;
+  font-weight: 600;
+  line-height: 3rem;
+}
+.info {
+  @extend .fontSize1;
+  @extend .colorGrey;
+  line-height: 2.5rem;
+  margin-bottom: 3rem;
 }
