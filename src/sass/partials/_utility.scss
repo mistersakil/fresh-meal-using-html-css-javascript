@@ -207,6 +207,23 @@ a:active {
     z-index: -1;
   }
 }
+.boxShadowCard {
+  position: relative;
+  background: white;
+  &::after {
+    content: "";
+    height: 5px;
+    width: 100%;
+    background-image: url("../images/shadow.svg");
+    position: absolute;
+    background-size: cover;
+    background-repeat: no-repeat;
+    bottom: -2px;
+    left: 50%;
+    z-index: -1;
+    transform: translateX(-50%);
+  }
+}
 .btn {
   padding: 0.5rem 1rem;
   background-color: var(--bgPrimary);
