@@ -25,3 +25,33 @@ var swiper = new Swiper(".mySwiper", {
 });
 
 /* Top products swiper slider */
+
+/* Deal Parallax */
+let deal = document.querySelector(".deals");
+window.addEventListener("scroll", function () {
+  let _scrollHeight = Math.floor(window.pageYOffset);
+  let _viewportHeight = _viewportHeightCalc();
+  let _offsetTop = deal.offsetTop;
+  _offsetTop -= _viewportHeight;
+  if (_scrollHeight >= _offsetTop) {
+    let difference = (_scrollHeight - _offsetTop) * 0.2;
+    deal.querySelector(
+      ".parallax .img"
+    ).style.transform = `translateY(-${difference}px)`;
+    if (difference > 250) {
+      deal.querySelector(
+        ".parallax .img"
+      ).style.transform = `translateY(-250px)`;
+    }
+  }
+});
+function _viewportHeightCalc() {
+  let viewportHeight;
+  if (window.innerHeight !== undefined) {
+    viewportHeight = window.innerHeight;
+  } else {
+    viewportHeight = document.documentElement.clientHeight;
+  }
+  return viewportHeight;
+}
+/* Deal Parallax end */

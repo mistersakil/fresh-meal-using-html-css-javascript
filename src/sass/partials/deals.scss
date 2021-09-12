@@ -1,6 +1,25 @@
 .deals {
   position: relative;
-  background: linear-gradient(rgba(20, 20, 20, 0.9), rgba(20, 20, 20, 0.9)),
-    url(../images/food-table.jpg) no-repeat fixed center;
-  background-size: cover;
+  height: 60vh;
+  z-index: 10;
+  .parallax {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    overflow: hidden;
+    background: var(--bgPrimary);
+    .img {
+      width: 100%;
+      object-fit: cover;
+      opacity: 0.2;
+      position: relative;
+      transform: translateY(0px);
+    }
+  }
+  .container {
+    z-index: 9;
+  }
 }
