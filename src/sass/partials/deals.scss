@@ -1,6 +1,6 @@
 .deals {
   position: relative;
-  height: 60vh;
+  min-height: 60vh;
   z-index: 10;
   .parallax {
     width: 100%;
@@ -19,7 +19,41 @@
       transform: translateY(0px);
     }
   }
-  .container {
-    z-index: 9;
+  .col {
+    flex: 1 1 90%;
+    padding: 5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+    background-color: var(--bgSecondary);
+    box-shadow: 0 0 0px 10px var(--bgGrey);
+    .heading {
+      font-size: 4rem;
+      color: var(--colorPrimary);
+      border-bottom: 0.2rem solid var(--colorBrand);
+      padding-bottom: 2rem;
+    }
+    .subHeading {
+      color: var(--colorPrimary);
+    }
+    &:hover {
+      background-color: var(--bgGrey);
+      box-shadow: 0 0 0px 10px var(--bgSecondary);
+
+      .heading {
+        color: var(--colorSecondary);
+      }
+      .subHeading {
+        color: var(--colorSecondary);
+      }
+    }
+    @include _mediumScreen {
+      flex: 1 1 45%;
+    }
+    @include _largeScreen {
+      flex: 1 1 20%;
+    }
   }
 }

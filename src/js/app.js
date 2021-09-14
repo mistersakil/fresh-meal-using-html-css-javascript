@@ -34,15 +34,10 @@ window.addEventListener("scroll", function () {
   let _offsetTop = deal.offsetTop;
   _offsetTop -= _viewportHeight;
   if (_scrollHeight >= _offsetTop) {
-    let difference = (_scrollHeight - _offsetTop) * 0.2;
+    let difference = (_scrollHeight - _offsetTop) * 0.1;
     deal.querySelector(
       ".parallax .img"
     ).style.transform = `translateY(-${difference}px)`;
-    if (difference > 250) {
-      deal.querySelector(
-        ".parallax .img"
-      ).style.transform = `translateY(-250px)`;
-    }
   }
 });
 function _viewportHeightCalc() {
