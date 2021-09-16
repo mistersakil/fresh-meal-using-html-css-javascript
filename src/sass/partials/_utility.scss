@@ -167,13 +167,13 @@ a:active {
   }
 }
 .gap5 {
-  gap: 1rem;
+  gap: 3rem;
   @include _smallScreen {
     gap: 5rem;
   }
 }
 .gap10 {
-  gap: 1rem;
+  gap: 3rem;
   @include _smallScreen {
     gap: 10rem;
   }

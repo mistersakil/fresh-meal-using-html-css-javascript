@@ -12,7 +12,7 @@ export default () => {
     .pipe(
       imagemin([
         gifsicle({ interlaced: true }),
-        mozjpeg({ quality: 10, progressive: true }),
+        mozjpeg({ quality: 20, progressive: true }),
         optipng({ optimizationLevel: 1 }),
         // svgo({
         //   plugins: [{ removeViewBox: true }, { cleanupIDs: false }],

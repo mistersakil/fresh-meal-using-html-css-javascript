@@ -1,0 +1,42 @@
+.news {
+  position: relative;
+  min-height: 100vh;
+
+  .col {
+    flex: 1 1 90%;
+    border-radius: 1rem;
+    border: 5px solid var(--bgSecondary);
+    overflow: hidden;
+    .figure {
+      width: 100%;
+      max-height: 20rem;
+      overflow: hidden;
+      .img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+    .content {
+      padding: 2rem;
+      .link {
+        color: var(--bgGrey);
+        padding: 0.2rem 1rem;
+        border-radius: 0.5rem;
+        background: var(--colorGreyLight);
+        font-size: 1.4rem;
+      }
+      .subHeading {
+        font-size: 2rem;
+        font-weight: 500;
+        padding-top: 2rem;
+        display: block;
+        line-height: 2.5rem;
+      }
+    }
+    @include _mediumScreen {
+      flex: 1 1 30%;
+    }
+  }
+}

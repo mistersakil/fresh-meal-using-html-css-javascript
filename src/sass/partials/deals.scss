@@ -2,6 +2,14 @@
   position: relative;
   min-height: 60vh;
   z-index: 10;
+  .sectionTitle {
+    .colorSecondary {
+      color: var(--colorPrimary);
+      @include _mediumScreen {
+        color: var(--colorSecondary);
+      }
+    }
+  }
   .parallax {
     width: 100%;
     height: 100%;
@@ -10,6 +18,7 @@
     left: 0;
     z-index: -1;
     overflow: hidden;
+    display: none;
     background: var(--bgPrimary);
     .img {
       width: 100%;
@@ -17,6 +26,9 @@
       opacity: 0.2;
       position: relative;
       transform: translateY(0px);
+    }
+    @include _mediumScreen {
+      display: block;
     }
   }
   .col {
@@ -41,6 +53,7 @@
     &:hover {
       background-color: var(--bgGrey);
       box-shadow: 0 0 0px 10px var(--bgSecondary);
+      transform: scale(1.1);
 
       .heading {
         color: var(--colorSecondary);
