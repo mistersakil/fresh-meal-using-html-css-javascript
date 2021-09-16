@@ -46,7 +46,14 @@
     background: transparent;
     color: var(--colorGrey);
     margin-top: 5rem;
-    border: 0.1rem solid var(--bgGrey);
     padding: 0.5rem 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 5px 1px var(--colorGrey);
+    &:hover {
+      color: var(--colorSecondary);
+      border-color: var(--bgSecondary);
+      background-color: var(--bgPrimary);
+      box-shadow: 0 5px 2px var(--colorPrimary);
+    }
   }
 }

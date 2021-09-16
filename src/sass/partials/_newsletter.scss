@@ -1,0 +1,89 @@
+.newsletter {
+  position: relative;
+  width: 100%;
+  .col {
+    width: 100%;
+    @include _mediumScreen {
+      width: 48%;
+    }
+  }
+
+  .left {
+    .figure {
+      width: 100%;
+      overflow: hidden;
+      .img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  /* .left */
+
+  .right {
+    .capitalize {
+      text-align: center;
+    }
+    .ucFirst {
+      margin: 2rem 0;
+      text-align: justify;
+      text-justify: inter-word;
+      text-shadow: 0 0 5px var(--colorSecondary);
+    }
+    .newsletterForm {
+      position: relative;
+      width: 100%;
+      background-color: var(--bgBrand);
+      padding: 0.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+      border-radius: 0.5rem;
+      z-index: 10;
+      overflow: hidden;
+
+      input {
+        background-color: transparent;
+        font-size: 1.6rem;
+        font-weight: 400;
+        border: none;
+        outline: none;
+        padding: 1rem;
+        color: var(--colorGreyLight);
+        text-align: center;
+        @include _xSmallScreen {
+          text-align: left;
+        }
+      }
+      .btnSubscribe {
+        background-color: var(--colorSecondary);
+        color: var(--colorGrey);
+        border-radius: 0.5rem;
+        padding: 1.5rem 3rem;
+        cursor: pointer;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 150%;
+        z-index: -1;
+        background-color: var(--bgWarning);
+        left: 0;
+        top: 0;
+        clip-path: inset(0 50% 0 50%);
+        transition: all 0.3s ease;
+      }
+      &:hover::after {
+        clip-path: inset(0);
+      }
+      @include _smallScreen {
+        justify-content: space-between;
+      }
+    }
+  }
+  /* .right */
+}

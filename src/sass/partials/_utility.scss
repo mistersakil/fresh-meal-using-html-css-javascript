@@ -43,7 +43,7 @@ html {
 body {
   color: var(--colorPrimary);
   font-size: 1.6rem;
-  min-height: 5000px;
+  min-height: 6000px;
   font-family: "Poppins", "Roboto", " Oswald", "GreatVibes", cursive, Arial,
     Helvetica, sans-serif;
   background: var(--bgLight);
@@ -57,7 +57,7 @@ body {
   --colorBrand: rgb(20, 20, 20);
 }
 section {
-  padding: 5rem 0 10rem 0;
+  padding: 5rem 0 5rem 0;
 }
 p {
   font-family: "Roboto", "Poppins", sans-serif;
@@ -139,11 +139,13 @@ a:active {
   font-size: 2rem;
 }
 .fontSize3 {
-  font-size: 3rem;
+  font-size: 2rem;
+  @include _mediumScreen {
+    font-size: 3rem;
+  }
 }
 .fontSize4 {
-  font-size: 3rem;
-
+  font-size: 2rem;
   @include _mediumScreen {
     font-size: 4rem;
   }
@@ -354,4 +356,13 @@ a:active {
   @extend .colorGrey;
   line-height: 2.5rem;
   margin-bottom: 3rem;
+}
+
+.backgroundParallax {
+  background-image: url(../images/hero.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left;
+  background-origin: border-box;
+  background-attachment: fixed;
 }
