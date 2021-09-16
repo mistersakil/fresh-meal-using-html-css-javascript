@@ -35,8 +35,18 @@
         line-height: 2.5rem;
       }
     }
+    &:hover {
+      box-shadow: 0 5px 1px var(--bgBrand);
+    }
     @include _mediumScreen {
       flex: 1 1 30%;
     }
+  }
+  .btnDefault {
+    background: transparent;
+    color: var(--colorGrey);
+    margin-top: 5rem;
+    border: 0.1rem solid var(--bgGrey);
+    padding: 0.5rem 2rem;
   }
 }
