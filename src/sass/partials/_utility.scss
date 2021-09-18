@@ -225,8 +225,11 @@ a:active {
     left: 0%;
     background-size: contain;
     background-repeat: no-repeat;
-    bottom: -2.8rem;
+    bottom: -35px;
     z-index: -1;
+    @include _largeScreen {
+      bottom: -28px;
+    }
   }
 }
 .boxShadowCard {

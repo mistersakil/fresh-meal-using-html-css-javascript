@@ -2,16 +2,36 @@
   padding: 2rem 0;
   .nav {
     position: relative;
+    display: none;
+    @include _mediumScreen {
+      display: flex;
+    }
     .link {
-      padding: 1rem 2rem;
+      padding: 0.5rem;
       font-size: var(--fontSize2);
       color: var(--colorGrey);
       transition: all 0.3s linear;
+      @include _largeScreen {
+        padding: 1rem 2rem;
+      }
       &.active,
       &:hover {
         background-color: var(--bgBrand);
         color: var(--colorSecondary);
       }
+    }
+  }
+  .active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    .link {
+      padding: 0.5rem 0;
+      display: block;
+      width: 100%;
+      text-align: center;
     }
   }
 }
