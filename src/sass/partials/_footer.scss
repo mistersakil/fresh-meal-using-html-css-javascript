@@ -1,0 +1,53 @@
+.footer {
+  position: relative;
+  .col {
+    flex: 1 1 100%;
+    @include _smallScreen {
+      flex: 1 1 36%;
+    }
+    @include _largeScreen {
+      flex: 1 1 18%;
+    }
+    .subHeading {
+      border-bottom: 0.1rem solid var(--colorGrey);
+      padding-bottom: 1rem;
+    }
+    .info {
+      color: var(--colorSecondary);
+    }
+    /* .info */
+    .nav {
+      position: relative;
+      .link {
+        color: var(--colorSecondary);
+        display: block;
+        width: 100%;
+        padding: 0.5rem 0;
+        text-decoration: none;
+        .icon {
+          display: inline-block;
+          margin-right: 1rem;
+          width: 3rem;
+        }
+      }
+    }
+    /* .nav */
+    .navGallery {
+      position: relative;
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      overflow: hidden;
+      .link {
+        flex: 1 1 30%;
+        img {
+          width: 100%;
+          object-fit: cover;
+          object-position: center;
+        }
+      }
+    }
+    /* .navGallery */
+  }
+  /* .col */
+}
