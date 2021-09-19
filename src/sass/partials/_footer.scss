@@ -50,4 +50,15 @@
     /* .navGallery */
   }
   /* .col */
+  .copyright {
+    @extend .ucFirst;
+    color: var(--colorGrey);
+    padding-top: 5rem;
+    font-size: 1.4rem;
+    .company {
+      @extend .ucFirst;
+      color: var(--colorBrand);
+      font-size: inherit;
+    }
+  }
 }
