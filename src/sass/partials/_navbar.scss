@@ -1,37 +1,62 @@
 .navbar {
   padding: 2rem 0;
-  .nav {
-    position: relative;
-    display: none;
-    @include _mediumScreen {
-      display: flex;
-    }
-    .link {
-      padding: 0.5rem;
-      font-size: var(--fontSize2);
-      color: var(--colorGrey);
-      transition: all 0.3s linear;
-      @include _largeScreen {
-        padding: 1rem 2rem;
+  display: none;
+  .container {
+    .nav {
+      position: relative;
+      .link {
+        padding: 0.5rem;
+        font-size: var(--fontSize2);
+        color: var(--colorGrey);
+        transition: all 0.3s linear;
+        @include _largeScreen {
+          padding: 1rem 2rem;
+        }
+        &.active,
+        &:hover {
+          background-color: var(--bgBrand);
+          color: var(--colorSecondary);
+        }
       }
-      &.active,
-      &:hover {
-        background-color: var(--bgBrand);
-        color: var(--colorSecondary);
+    }
+    /* .nav */
+  }
+  /* .container */
+  &.active {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: var(--bgSecondary);
+    height: 100vh;
+    z-index: 100;
+    width: 200px;
+    padding: 0;
+    border-right: 4px solid var(--bgBrand);
+    overflow: hidden;
+
+    @include _xSmallScreen {
+      width: 300px;
+    }
+    .container {
+      width: inherit;
+      padding: 0;
+      .nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .link {
+          padding: 0.5rem 0;
+          display: block;
+          width: 100%;
+          text-align: center;
+        }
       }
     }
   }
-  .active {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    .link {
-      padding: 0.5rem 0;
-      display: block;
-      width: 100%;
-      text-align: center;
-    }
+  /* .active */
+  @include _mediumScreen {
+    display: block;
   }
 }

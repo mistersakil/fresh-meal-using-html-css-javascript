@@ -14,6 +14,9 @@
   </head>
   <body>
     <header class="topBar bgPrimary" id="topBar">
+      <div class="hamburger">
+        <i class="fas fa-hamburger icon"></i>
+      </div>
       <div class="container">
         <div class="row flex wrap alignCenter justifyBetween gap2">
           <div class="col">
@@ -57,10 +60,10 @@
       <!-- /.container  -->
     </header>
     <!-- topBar  -->
-    <section class="logoSection">
+    <section class="section logoSection">
       <div class="container">
         <div class="row flex justifyBetween alignCenter wrap gap2">
-          <div class="col flex alignCenter gap1">
+          <div class="col flex alignCenter gap1 hiddenSmall">
             <i class="fas fa-phone-alt fontSize2 colorBrand"></i>
             <p class="content flexColumn">
               <span class="fontSize1 textBold ucFirst"
@@ -72,11 +75,11 @@
             </p>
           </div>
           <!-- /.col   -->
-          <div class="col">
+          <div class="col colSm">
             <a href="./" class="logo">fresh meal</a>
           </div>
           <!-- /.col   -->
-          <div class="col flex alignCenter gap1">
+          <div class="col flex alignCenter gap1 hiddenSmall">
             <i class="fas fa-clock fontSize2 colorBrand"></i>
             <p class="content flexColumn">
               <span class="fontSize fontSize1 textBold ucFirst"
@@ -93,7 +96,7 @@
     </section>
     <!-- topBar end -->
     <!-- logoSection   -->
-    <section class="navbar">
+    <section class="section navbar" id="navbar">
       <div class="container">
         <div class="row">
           <div class="col">
@@ -116,11 +119,11 @@
     </section>
     <!-- logoSection end  -->
     <!-- hero section   -->
-    <section class="hero">
+    <section class="section hero">
       <div class="container">
         <div class="row flex justifyBetween alignCenter wrap gap2">
           <div class="content">
-            <h2 class="fontSize2 capitalize">
+            <h2 class="fontSize2 capitalize hiddenSmall">
               welcome to
               <span class="logo colorBrand fontSize3">fresh meal</span>
             </h2>
@@ -148,7 +151,7 @@
     <!-- hero section end   -->
 
     <!-- top products   -->
-    <section class="topProducts bgGreyLight">
+    <section class="section topProducts bgGreyLight">
       <div class="container">
         <h2 class="sectionTitle gap1">
           top <span class="colorBrand">products</span>
@@ -287,7 +290,7 @@
     <!-- top products end   -->
 
     <!-- about section   -->
-    <section class="about">
+    <section class="section about">
       <h2 class="sectionTitle gap1">
         about <span class="colorBrand">fresh meal</span>
       </h2>
@@ -329,7 +332,7 @@
     <!-- about section end   -->
 
     <!-- services section   -->
-    <section class="services bgGreyLight">
+    <section class="section services bgGreyLight">
       <h2 class="sectionTitle gap1">
         our <span class="colorBrand">services</span>
       </h2>
@@ -387,7 +390,7 @@
     <!-- services section end   -->
 
     <!-- deals of the week section   -->
-    <section class="deals">
+    <section class="section deals">
       <h2 class="sectionTitle gap1">
         <span class="colorSecondary">deals</span>
         <span class="colorBrand"> of the day</span>
@@ -428,7 +431,7 @@
     <!-- deals of the week  section end   -->
 
     <!-- news section   -->
-    <section class="news bgGreyLight">
+    <section class="section news bgGreyLight">
       <h2 class="sectionTitle gap1">
         <span class="colorP">latest</span>
         <span class="colorBrand">news</span>
@@ -523,7 +526,7 @@
     <!-- services section end   -->
 
     <!-- newsletter section   -->
-    <section class="newsletter backgroundParallax">
+    <section class="section newsletter backgroundParallax">
       <div class="container">
         <div class="row flex justifyBetween alignCenter wrap gap1">
           <div class="col left">
@@ -565,7 +568,7 @@
     <!-- newsletter section end   -->
 
     <!-- contact section   -->
-    <section class="contact bgGreyLight">
+    <section class="section contact bgGreyLight">
       <div class="row flex justifyBetween alignCenter wrap gap2">
         <div class="col left">
           <h2 class="sectionTitle gap1">
@@ -636,8 +639,8 @@
     <!-- /.newsletter -->
     <!-- newsletter section end   -->
 
-    <!-- contact section   -->
-    <section class="footer bgPrimary">
+    <!-- footer section   -->
+    <footer class="section footer bgPrimary">
       <div class="container">
         <div class="row flex justifyBetween wrap gap5">
           <div class="col">
@@ -712,9 +715,13 @@
         <!-- /.row -->
       </div>
       <!-- /.container -->
-    </section>
-    <!-- /.newsletter -->
-    <!-- newsletter section end   -->
+    </footer>
+
+    <div id="goToTop">
+      <i class="fas fa-angle-up icon"></i>
+    </div>
+    <!-- /.footer -->
+    <!-- footer section end   -->
 
     <script src="./public/js/main.js"></script>
   </body>

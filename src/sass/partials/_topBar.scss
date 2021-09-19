@@ -1,7 +1,29 @@
 .topBar {
   padding: 0.5rem 0;
   color: var(--colorGreyLight);
+  .hamburger {
+    width: 3rem;
+    height: 3rem;
+    line-height: 3rem;
+    text-align: center;
+    position: fixed;
+    right: 0;
+    top: 4px;
+    clip-path: inset(0);
+    z-index: 101;
+    background: var(--bgPrimary);
+    .icon {
+      font-size: 2rem;
+    }
+    @include _mediumScreen {
+      clip-path: inset(0 0 0 100%);
+    }
+  }
+  /* .hamburger */
   .link {
     color: var(--colorGrey);
+    &:hover {
+      color: var(--colorSecondary);
+    }
   }
 }

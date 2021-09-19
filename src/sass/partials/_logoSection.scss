@@ -1,5 +1,15 @@
 .logoSection {
   padding: 2rem 0;
+  .colSm {
+    width: 100%;
+    text-align: center;
+    display: block;
+    @include _mediumScreen {
+      width: unset;
+      text-align: unset;
+      display: unset;
+    }
+  }
   .logo {
     font-family: "GreatVibes", cursive;
     font-size: 3.5rem;
